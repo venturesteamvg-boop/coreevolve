@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Component as SocialLoginIcons } from "@/components/ui/demo";
 
 export default function LoginPage() {
@@ -56,7 +57,15 @@ export default function LoginPage() {
       </div>
 
       <div className="relative z-10 flex min-h-screen items-center justify-center px-6 py-10">
-        <div className="relative w-full max-w-[420px] rounded-[18px] border border-white/20 bg-[linear-gradient(125deg,rgba(13,43,69,0.92)_0%,rgba(26,26,26,0.95)_57%,rgba(47,127,134,0.6)_100%)] p-8 text-white shadow-[0_20px_60px_rgba(0,0,0,0.45),inset_0_1px_rgba(255,255,255,0.25)] backdrop-blur-2xl sm:p-10">
+        <div className="relative w-full max-w-[420px]">
+          <Link
+            href="/"
+            className="mb-4 inline-flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
+          >
+            <span className="text-lg">&larr;</span>
+            Back
+          </Link>
+          <div className="relative rounded-[18px] border border-white/20 bg-[linear-gradient(125deg,rgba(13,43,69,0.92)_0%,rgba(26,26,26,0.95)_57%,rgba(47,127,134,0.6)_100%)] p-8 text-white shadow-[0_20px_60px_rgba(0,0,0,0.45),inset_0_1px_rgba(255,255,255,0.25)] backdrop-blur-2xl sm:p-10">
           <div className="pointer-events-none absolute inset-0 rounded-[18px] bg-gradient-to-br from-white/20 via-white/5 to-transparent" />
           <div className="relative z-10">
             <h1 className="mb-2 text-3xl font-normal tracking-wide text-white [font-family:var(--font-instrument-serif)]">
@@ -168,6 +177,7 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
+    </div>
     </section>
   );
 }
