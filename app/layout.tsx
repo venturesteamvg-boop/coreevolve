@@ -19,8 +19,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Velorah",
+  title: "CoreEvolve",
   description: "Focus in a distracted world",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
